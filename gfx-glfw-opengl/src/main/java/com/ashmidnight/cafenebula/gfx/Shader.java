@@ -29,5 +29,11 @@ final class Shader {
         glDeleteShader(fs);
     }
 
-    void bind() { glUseProgram(prog); }
+    void bind() {
+        glUseProgram(prog);
+    }
+
+    void cleanup() {
+        glDeleteProgram(prog);
+    }
 }

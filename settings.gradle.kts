@@ -1,5 +1,4 @@
 rootProject.name = "cafe-nebula"
 
-include(":engine-core")
-include(":gfx-glfw-opengl")
+include(":engine-core", ":gfx-glfw-opengl", ":samples")
 

@@ -1,5 +1,4 @@
 plugins {
-    application
     java
 }
 
@@ -36,9 +35,4 @@ dependencies {
     runtimeOnly("org.lwjgl:lwjgl::$lwjglNatives")
     runtimeOnly("org.lwjgl:lwjgl-glfw::$lwjglNatives")
     runtimeOnly("org.lwjgl:lwjgl-opengl::$lwjglNatives")
-}
-
-application {
-    // Update if your package/class differs
-    mainClass.set("com.ashmidnight.cafenebula.SandboxMain")
 }

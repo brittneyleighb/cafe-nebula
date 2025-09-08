@@ -1,5 +1,7 @@
 package com.ashmidnight.cafenebula;
 
+import com.ashmidnight.cafenebula.engine.GlfwInput;
+import com.ashmidnight.cafenebula.engine.Key;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
 import static org.lwjgl.glfw.GLFW.*;
@@ -8,6 +10,7 @@ import static org.lwjgl.system.MemoryUtil.NULL;
 
 public final class SandboxMain {
     private long window;
+    // private GlfwInput input;
 
     public static void main(String[] args) { new SandboxMain().run(); }
 
@@ -40,6 +43,7 @@ public final class SandboxMain {
         glfwMakeContextCurrent(window);
         glfwSwapInterval(1); // vsync
         GL.createCapabilities();
+        // input = new GlfwInput(window);  // Initialize the input handler
         glfwShowWindow(window);
     }
 
@@ -53,6 +57,12 @@ public final class SandboxMain {
             acc += now - last; last = now;
 
             glfwPollEvents();
+
+            // Now you can add input checking here, like:
+            // if (input.isKeyDown(Key.ESCAPE)) {
+            //     glfwSetWindowShouldClose(window, true);
+            // }
+
             while (acc >= DT) { hue = (hue + 0.2f * (float)DT) % 1f; acc -= DT; }
 
             float[] rgb = hsv(hue, 0.6f, 0.9f);
