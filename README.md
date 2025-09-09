@@ -11,7 +11,7 @@ A custom game engine built in Java using LWJGL (Lightweight Java Game Library) f
 ## Why Java for Game Engine Development?
 
 ### Educational Value
-As a computer science master's student, building a game engine in Java is a learning project:
+As a computer science master's student, building a game engine in Java is a learning project for me. So...Why Java?
 
 - **Memory Management Understanding**: Java's garbage collector teaches automatic memory management principles.
 - **Object-Oriented Design**: Java's OOP makes architectural patterns (Entity-Component-System, Observer, Factory) explicit and easier to understand.
